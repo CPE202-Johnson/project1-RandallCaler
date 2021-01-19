@@ -12,8 +12,8 @@ def bears(n):
             return True
     #When it's divisible by 3 or 4
     if n%3 == 0 or n%4 == 0:
-        temp1 = int(n/10)
-        temp2 = int(n%10)
+        temp1 = ((n//10)%10)
+        temp2 = (n%10)
         if temp1 != 0 and temp2 != 0:
           if bears(n - temp1*temp2) is True:
               return True
